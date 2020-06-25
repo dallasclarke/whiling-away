@@ -7,16 +7,17 @@ function challenge1 () {
     let num = 1;
     while (num <= 5) {
         console.log(num);
-        num = num + 1
+        num = num + 1;
     }
 }
 challenge1();
 
 challengeBanner(2);
 function challenge2 (n) {
-while (n >= 1 && n <= 10) {
-console.log(n)
-n--;
+let num = 1;
+while (num <= n) {
+console.log(num)
+num++;
 }
 }
 challenge2(6);
@@ -97,13 +98,12 @@ function sayWhat (str) {
 sayWhat("How's it going?");
 
 challengeBanner(10);
-function multiWord (str, num) {
-    let repeatedStr = "";
-    while (num > 0) {
-        repeatedStr += str;
-        num--;
+function multiWord (str, count) {
+    let num = 1;
+    while (num <= count) {
+        console.log(str);
+        num = num + 1;
     }
-    console.log(repeatedStr);
     }
 multiWord("goodbye", 6)
 
@@ -118,3 +118,63 @@ function everyCharacter (str) {
 everyCharacter("think");
 
 challengeBanner(12);
+function printEven (end){
+    let num = 2;
+    while (num <= end) {
+        console.log(num);
+        num = num + 2;
+        }
+    }
+printEven(11);
+
+challengeBanner(13);
+function everyOther (str) {
+    let i = 1;
+    while ( i < str.length) {
+        console.log(str[i])
+        i = i + 2;
+    }
+}
+everyOther("nobody");
+
+challengeBanner(14);
+function reverseOrder (str) {
+    let i = str.length - 1;
+    while (i >= 0) {
+        console.log(str[i]);
+        i--;
+    }
+}
+reverseOrder("dallas");
+
+challengeBanner(15);
+function fizzBuzz (n) {
+    let num = 1;
+    while (num <= n) {
+        if (num % 3 === 0 && num % 5 === 0) {
+            console.log("FizzBuzz")
+        } else if (num % 3 === 0) {
+            console.log("Fizz");
+        } else if (num % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(num);
+        }
+        num++
+    }
+}
+fizzBuzz(15)
+
+challengeBanner(16);
+function fibonacci (end) {
+    let current = 1;
+    let previous = 1;
+    console.log(current)
+    while (current <= end) {
+        console.log(current);
+        const temp = current;
+        current = current + previous;
+        previous = temp;
+    }
+}
+fibonacci(21);
